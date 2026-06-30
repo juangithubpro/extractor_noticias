@@ -14,13 +14,13 @@ document.getElementById('extract-btn').addEventListener('click', async function(
 
     try {
         // Hacemos la petición real a nuestra API de Python local
-        const respuesta = await fetch('http://127.0.0.1:5000/api/extraer', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ url: urlInput })
-        });
+        const respuesta = await fetch('https://extractor-mq1j.onrender.com/api/extraer', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ url: urlInput })
+});
 
         const datos = await respuesta.json();
 
